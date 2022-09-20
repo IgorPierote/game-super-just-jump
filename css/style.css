@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Game-Board {
+    width: 80%;
+    height: 500px;
+    border: 1px solid rgb(44, 44, 44);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.ghost{
+    transform: scaleX(-1);
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    animation: ghost-animation 2s infinite linear;
+}
+
+.just{
+    width: 300px;
+    position: absolute;
+    bottom: 0;
+}
+
+.jump{
+    animation: jump 500ms ease-out;
+}
+
+
+
+@keyframes jump {
+    
+    0%{
+        bottom:0;
+    }
+    50%{
+        bottom: 100px;
+    }
+    60%{
+        bottom: 100px;
+    }
+    70%{
+        bottom: 90px;
+    }
+    100%{
+        bottom: 0;
+    }
+
+}
+
+@keyframes ghost-animation{
+    from {
+        right: 0;
+    }
+    to {
+        right: 100%;
+    }
+}
